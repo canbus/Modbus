@@ -128,13 +128,13 @@ unsigned short do_crc(unsigned char *ptr, int len)
 int crc16 = do_crc(buf, sizeof(buf));
 ```
 # 大彩屏modbus的使用
-1.安装VisualHMI_V1.1.359
-2打开demo: 1.HMI80480KM070
-3.点“编译运行”，会打开虚拟机,同时会打开一个调试窗体，选择串口"COM2",并打开
-4.打开串口调试助手，选择“COM1“，可以看到虚拟机输出的信息
+1. 安装VisualHMI_V1.1.359
+2. 打开demo: 1.HMI80480KM070
+3. 点“编译运行”，会打开虚拟机,同时会打开一个调试窗体，选择串口"COM2",并打开
+4. 打开串口调试助手，选择“COM1“，可以看到虚拟机输出的信息
 
-5.关闭虚拟机，把协议调整成modbus,并(点教本编程)修改lua程序如下:
-
+5. 关闭虚拟机，把协议调整成modbus,并(点教本编程)修改lua程序如下:
+```lua
 --数据类型定义
 VT_LW = 1    --变量地址	--界面上控件的变量地址
 VT_RW = 2    --FLASH存储
@@ -160,3 +160,4 @@ function on_update(slave,vtype,addr)
 		print("set vt_4x"..val)
 	end
 	
+```
