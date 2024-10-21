@@ -159,5 +159,9 @@ function on_update(slave,vtype,addr)
 		set_uint16(VT_4x, 0x0002, val)
 		print("set vt_4x"..val)
 	end
-	
+
+-- 大彩作为主机轮询 
+select_slave(0)
+start_read(1,VT_4x, 0x1010,1)
+redraw()
 ```
